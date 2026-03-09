@@ -4,75 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SmartShop by ORA</title>
-  <meta name="description" content="SmartShop install page and early supporter plans." />
+  <meta name="description" content="Install SmartShop and unlock early supporter pricing." />
+  <meta name="theme-color" content="#0d1117" />
+
+  <!-- Social share preview -->
+  <meta property="og:title" content="SmartShop by ORA" />
+  <meta property="og:description" content="Install SmartShop and unlock early supporter pricing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jakeoperationalrealityadvisors-design.github.io/smartshop-install/" />
+  <meta property="og:image" content="https://jakeoperationalrealityadvisors-design.github.io/smartshop-install/smartshop-logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SmartShop by ORA" />
+  <meta name="twitter:description" content="Install SmartShop and unlock early supporter pricing." />
+  <meta name="twitter:image" content="https://jakeoperationalrealityadvisors-design.github.io/smartshop-install/smartshop-logo.png" />
+
   <style>
     * {
       box-sizing: border-box;
     }
 
+    :root {
+      --bg1: #091018;
+      --bg2: #0d1117;
+      --card: #171c24;
+      --card-border: rgba(255,255,255,0.05);
+      --text: #ffffff;
+      --muted: #a7b0bf;
+      --muted-2: #667085;
+      --green: #43d17c;
+      --green-shadow: rgba(67, 209, 124, 0.30);
+      --pill: rgba(67, 209, 124, 0.15);
+    }
+
     body {
       margin: 0;
-      background: linear-gradient(180deg, #091018 0%, #0d1117 100%);
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
       font-family: Arial, sans-serif;
-      color: white;
+      color: var(--text);
     }
 
     .container {
       max-width: 420px;
-      margin: 0 auto;
-      padding: 24px 18px;
+      margin: auto;
+      padding: 24px 16px 32px;
     }
 
     .card {
-      background: #171c24;
+      background: var(--card);
       border-radius: 22px;
       padding: 24px;
       margin-bottom: 18px;
       box-shadow: 0 12px 26px rgba(0, 0, 0, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+    }
+
+    .hero {
+      position: relative;
       overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -60px;
+      top: -60px;
+      background: radial-gradient(circle, rgba(67, 209, 124, 0.12), transparent 70%);
+      pointer-events: none;
     }
 
     .logo {
       width: 120px;
       display: block;
-      margin: 0 auto 12px auto;
-      border-radius: 22px;
+      margin: 0 auto 14px auto;
+      border-radius: 20px;
     }
 
     h1 {
       text-align: center;
-      margin: 6px 0 6px 0;
+      margin: 6px 0;
       font-size: 32px;
       letter-spacing: -0.5px;
     }
 
     h2 {
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
       font-size: 20px;
     }
 
+    h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
     p {
-      color: #a7b0bf;
+      color: var(--muted);
       line-height: 1.55;
-      margin: 0 0 12px 0;
+      margin: 0 0 12px;
+    }
+
+    .center {
+      text-align: center;
     }
 
     .price {
       font-size: 34px;
       font-weight: bold;
       margin-top: 4px;
+      margin-bottom: 8px;
     }
 
     .price span {
       font-size: 14px;
-      color: #a7b0bf;
+      color: var(--muted);
       font-weight: normal;
     }
 
     .tag {
       font-size: 12px;
-      background: rgba(67, 209, 124, 0.15);
+      background: var(--pill);
       padding: 6px 10px;
       border-radius: 20px;
       display: inline-block;
@@ -83,37 +135,30 @@
     .btn {
       display: block;
       width: 100%;
-      max-width: 100%;
       padding: 16px;
       text-align: center;
       text-decoration: none;
       font-weight: bold;
       border-radius: 14px;
       margin-top: 12px;
-      transition: 0.2s;
-      box-sizing: border-box;
+      transition: 0.2s ease;
     }
 
     .btn:hover {
       transform: translateY(-1px);
     }
 
-    .install {
-      background: #43d17c;
-      color: #07120b;
-      box-shadow: 0 8px 18px rgba(67, 209, 124, 0.35);
-    }
-
+    .install,
     .launch {
-      background: #43d17c;
+      background: var(--green);
       color: #07120b;
-      box-shadow: 0 8px 18px rgba(67, 209, 124, 0.25);
+      box-shadow: 0 8px 18px var(--green-shadow);
     }
 
     .early {
       background: #1f2733;
       color: white;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .steps p {
@@ -121,9 +166,29 @@
       margin-bottom: 8px;
     }
 
+    .qr-wrap {
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .qr {
+      width: 180px;
+      max-width: 100%;
+      border-radius: 14px;
+      margin-top: 8px;
+      background: white;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    .mini {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
     .footer {
       text-align: center;
-      color: #667085;
+      color: var(--muted-2);
       font-size: 12px;
       margin-top: 26px;
     }
@@ -132,16 +197,14 @@
 <body>
   <div class="container">
 
-    <div class="card">
+    <div class="card hero">
       <img src="smartshop-logo.png" class="logo" alt="SmartShop logo" />
 
       <h1>SmartShop</h1>
 
-      <p style="text-align:center;">
-        AI powered grocery optimization.
-      </p>
+      <p class="center">AI powered grocery optimization.</p>
 
-      <p style="text-align:center;">
+      <p class="center">
         Find better grocery prices, plan smarter trips, and keep more money in your pocket.
       </p>
 
@@ -150,18 +213,16 @@
         Install SmartShop
       </a>
 
-      <p style="font-size:12px; text-align:center;">
+      <p class="mini center">
         Android APK download — you may need to enable "Install Unknown Apps".
       </p>
     </div>
 
     <div class="card">
       <h2>Launch Supporter Plan</h2>
-
       <p>Public launch special for early supporters.</p>
 
       <div class="price">$10 <span>/ year</span></div>
-
       <div class="tag">Launch Special</div>
 
       <a class="btn launch"
@@ -174,11 +235,9 @@
 
     <div class="card">
       <h2>Early Supporter Plan</h2>
-
       <p>Private offer for family, testers and early insiders.</p>
 
       <div class="price">$1 <span>/ year</span></div>
-
       <div class="tag">Private Early Offer</div>
 
       <a class="btn early"
@@ -191,10 +250,22 @@
 
     <div class="card steps">
       <h2>How It Works</h2>
-
       <p>1. Install SmartShop</p>
       <p>2. Open the app and create your account</p>
       <p>3. Choose your supporter plan</p>
+    </div>
+
+    <div class="card">
+      <h3>Scan to Open SmartShop</h3>
+      <p>Post this page on Facebook or let people scan the QR code to open the install page fast.</p>
+
+      <div class="qr-wrap">
+        <img
+          class="qr"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fjakeoperationalrealityadvisors-design.github.io%2Fsmartshop-install%2F"
+          alt="QR code for SmartShop install page"
+        />
+      </div>
     </div>
 
     <div class="footer">
