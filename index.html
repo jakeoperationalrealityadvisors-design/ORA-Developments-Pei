@@ -6,10 +6,10 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0, viewport-fit=cover"
   />
-  <title>SmartShop by ORA | Install & Access</title>
+  <title>SmartShop by ORA | Easy Access</title>
   <meta
     name="description"
-    content="Access SmartShop by ORA on iPhone, Android, or desktop. Optimize grocery trips and save money."
+    content="Use SmartShop by ORA on iPhone, Android, tablet, or desktop. Open it instantly in your browser, log in, or install the Android version if you’d like."
   />
   <meta name="theme-color" content="#0b1118" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,6 +30,9 @@
       --border: rgba(255, 255, 255, 0.08);
       --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
       --radius: 18px;
+      --info-bg: rgba(255, 255, 255, 0.04);
+      --info-border: rgba(255, 255, 255, 0.08);
+      --soft: #d8e8ff;
     }
 
     * {
@@ -129,6 +132,22 @@
       color: #ffffff;
     }
 
+    .web-option {
+      margin: 16px 22px 0;
+      padding: 16px 18px;
+      background: var(--info-bg);
+      border: 1px solid var(--info-border);
+      border-radius: 16px;
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .web-option strong {
+      color: var(--text);
+    }
+
     .actions {
       padding: 22px;
       display: grid;
@@ -226,7 +245,7 @@
       border-radius: 12px;
       background: rgba(47, 128, 237, 0.1);
       border: 1px solid rgba(47, 128, 237, 0.18);
-      color: #d8e8ff;
+      color: var(--soft);
       font-size: 14px;
       line-height: 1.6;
     }
@@ -289,7 +308,7 @@
   <div class="wrap">
     <main class="hero">
       <section class="hero-top">
-        <div class="brand-badge">SMARTSHOP BY ORA • INSTALL & ACCESS</div>
+        <div class="brand-badge">SMARTSHOP BY ORA • EASY ACCESS</div>
 
         <img
           src="smartshop-logo.png"
@@ -300,15 +319,19 @@
         <h1>SmartShop by ORA</h1>
 
         <p class="subhead">
-          Stop driving to 5 stores to save 2 bucks. Open the app on iPhone,
-          Android, or desktop and make grocery shopping actually make sense.
+          Open SmartShop in seconds on iPhone, Android, tablet, or desktop.
+          No complicated setup needed — just tap, log in, and start shopping smarter.
         </p>
       </section>
 
       <div class="launch-banner">
-        <strong>iPhone users:</strong> open the web app in Safari, add it to your
-        Home Screen, and use it like an app.<br />
-        <strong>Android users:</strong> use the APK or the web app.
+        <strong>The easiest option is the web app.</strong><br />
+        It opens right in your browser and works great on most devices.
+      </div>
+
+      <div class="web-option">
+        <strong>Good news:</strong> you do <strong>not</strong> need to install anything to use SmartShop.
+        Just open the web app and sign in. If you’re on iPhone, you can also add it to your Home Screen so it feels just like an app.
       </div>
 
       <section class="actions">
@@ -318,7 +341,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Open SmartShop Web App
+          Open SmartShop
         </a>
 
         <a
@@ -327,76 +350,75 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Log In to SmartShop
+          Log In
         </a>
 
         <a class="btn btn-secondary" href="#ios-guide">
-          iPhone / iOS Instructions
+          iPhone / iPad Help
         </a>
 
         <a class="btn btn-secondary" href="smartshop.apk">
-          Download Android APK
+          Optional Android Download
         </a>
       </section>
 
       <section class="device-grid">
         <div class="card" id="ios-guide">
-          <h2>🍎 iPhone / iOS Users</h2>
+          <h2>🍎 iPhone / iPad Users</h2>
           <p>
-            SmartShop works on iPhone through Safari and can be added to your
-            Home Screen so it feels like a real app.
+            The easiest way to use SmartShop on iPhone is through Safari.
+            You can even add it to your Home Screen for quick one-tap access.
           </p>
 
           <ol class="steps">
-            <li>Tap <strong>Open SmartShop Web App</strong> above.</li>
-            <li>Make sure it opens in <strong>Safari</strong>.</li>
-            <li>Tap the <strong>Share</strong> icon at the bottom of Safari.</li>
-            <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
-            <li>Tap <strong>Add</strong> in the top corner.</li>
-            <li>Open SmartShop from your Home Screen anytime.</li>
+            <li>Tap <strong>Open SmartShop</strong> above.</li>
+            <li>If needed, open the page in <strong>Safari</strong>.</li>
+            <li>Tap the <strong>Share</strong> button in Safari.</li>
+            <li>Scroll and tap <strong>Add to Home Screen</strong>.</li>
+            <li>Tap <strong>Add</strong>.</li>
+            <li>Open SmartShop anytime from your Home Screen.</li>
           </ol>
 
           <div class="tips">
-            Best tip: if the link opens inside Facebook or another app, tap
-            <strong>Open in Safari</strong> first, then add it to your Home Screen.
+            If you opened the link from Facebook or another app, look for
+            <strong>Open in Safari</strong> first. After that, adding it to your Home Screen is easy.
           </div>
         </div>
 
         <div class="card">
           <h2>🤖 Android Users</h2>
           <p>
-            You can open the web app or install the Android APK if you want the
-            downloadable version on your phone.
+            You can use SmartShop right in your browser, or download the Android version if you prefer having it installed on your device.
           </p>
 
           <ol class="steps">
-            <li>Tap <strong>Download Android APK</strong>.</li>
-            <li>Open the downloaded APK file.</li>
-            <li>Allow install permissions if your phone asks.</li>
-            <li>Finish install and open SmartShop.</li>
-            <li>Log in and start shopping smarter.</li>
+            <li>For the simplest option, tap <strong>Open SmartShop</strong>.</li>
+            <li>Log in and start using it right away.</li>
+            <li>If you want the installed Android version, tap <strong>Optional Android Download</strong>.</li>
+            <li>Open the file and follow the prompts on your phone.</li>
+            <li>Once installed, open SmartShop and you’re good to go.</li>
           </ol>
 
           <div class="tips">
-            Already installed an older version? Download the new APK and install it again to update it.
+            Not into downloading apps outside the Play Store? No worries at all — the web app is the easiest option and works great.
           </div>
         </div>
       </section>
 
       <section class="feature-strip">
         <div class="feature">
-          <strong>Smarter grocery runs</strong><br />
-          Less bouncing from store to store. Less wasted gas. Less nonsense.
+          <strong>No pressure install</strong><br />
+          You can use SmartShop right in your browser without downloading anything.
         </div>
 
         <div class="feature">
-          <strong>Easy login access</strong><br />
-          Jump straight into the web app from iPhone, desktop, or tablet.
+          <strong>Quick access</strong><br />
+          Works on iPhone, Android, desktop, and tablet with simple login access.
         </div>
 
         <div class="feature">
-          <strong>Built by operators</strong><br />
-          Real-world practical tools, not fluffy tech junk.
+          <strong>Built for real life</strong><br />
+          Practical grocery tools made to save time, money, and extra running around.
         </div>
       </section>
     </main>
