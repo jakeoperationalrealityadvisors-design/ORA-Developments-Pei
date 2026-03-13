@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>ORA Projects | ORA Developments</title>
+<title>Products | ORA Developments</title>
 
 <style>
 
@@ -26,7 +26,7 @@ color:white;
 
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
 
@@ -34,34 +34,28 @@ position:fixed;
 top:20px;
 left:50%;
 transform:translateX(-50%);
-background:rgba(10,14,22,.75);
+background:rgba(10,14,22,.8);
 backdrop-filter:blur(18px);
 padding:14px 26px;
 border-radius:40px;
 display:flex;
-gap:30px;
 align-items:center;
+gap:30px;
 
 }
 
 nav img{
-
 height:36px;
-
 }
 
 nav a{
-
 text-decoration:none;
 color:#9fb2c7;
 font-size:14px;
-
 }
 
 nav a:hover{
-
 color:white;
-
 }
 
 /* HERO */
@@ -69,47 +63,48 @@ color:white;
 .hero{
 
 padding-top:180px;
+padding-bottom:100px;
 text-align:center;
-padding-bottom:120px;
 
 }
 
 .hero h1{
 
 font-size:60px;
-margin-bottom:12px;
+margin-bottom:10px;
 
 }
 
 .hero p{
 
-color:#9fb2c7;
 max-width:620px;
 margin:auto;
+color:#9fb2c7;
+font-size:18px;
 
 }
 
-/* PROJECT GRID */
+/* PRODUCT GRID */
 
-.projects{
+.products{
 
 max-width:1200px;
 margin:auto;
 padding:40px 20px;
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:50px;
 
 }
 
-/* PROJECT CARD */
+/* PRODUCT CARD */
 
-.project{
+.product{
 
 background:#101822;
-border-radius:20px;
-padding:30px;
+border-radius:22px;
+padding:36px;
 text-align:center;
 
 border:1px solid rgba(255,255,255,.05);
@@ -118,48 +113,42 @@ transition:.35s;
 
 }
 
-.project img{
+.product img{
 
-width:140px;
+width:160px;
 margin-bottom:20px;
 
 }
 
-.project:hover{
+.product:hover{
 
-transform:translateY(-12px);
+transform:translateY(-10px);
 box-shadow:0 50px 120px rgba(0,0,0,.7);
 
 }
 
-/* STATUS BADGE */
+/* STATUS BADGES */
 
 .status{
 
 display:inline-block;
 padding:6px 12px;
-font-size:12px;
 border-radius:20px;
+font-size:12px;
 margin-top:10px;
 
 }
 
 .live{
-
 background:#21a366;
-
 }
 
 .beta{
-
 background:#ff7a00;
-
 }
 
 .dev{
-
 background:#3a7cff;
-
 }
 
 /* BUTTON */
@@ -167,10 +156,12 @@ background:#3a7cff;
 .button{
 
 display:inline-block;
-margin-top:16px;
+margin-top:18px;
 padding:12px 18px;
 border-radius:10px;
+
 background:linear-gradient(135deg,#2f80ed,#4ea1ff);
+
 color:white;
 text-decoration:none;
 font-size:14px;
@@ -184,7 +175,7 @@ font-size:14px;
 text-align:center;
 margin-top:120px;
 margin-bottom:60px;
-font-size:40px;
+font-size:38px;
 
 }
 
@@ -200,7 +191,7 @@ color:#7d8a9a;
 
 footer img{
 
-width:200px;
+width:220px;
 margin-bottom:20px;
 
 }
@@ -211,36 +202,41 @@ margin-bottom:20px;
 
 <body>
 
+
 <nav>
 
 <img src="assets/ora-dev-logo.png">
 
 <a href="index.html">Home</a>
+<a href="products.html">Products</a>
 <a href="projects.html">Projects</a>
-<a href="#">About</a>
 
 </nav>
 
+
+
 <section class="hero">
 
-<h1>ORA Projects</h1>
+<h1>ORA Products</h1>
 
 <p>
 
-A growing ecosystem of tools designed to improve real-world operations.
+Software tools designed for real-world operations.
 
 </p>
 
 </section>
 
-<h2 class="section-title">Software Products</h2>
 
-<section class="projects">
+
+<h2 class="section-title">Applications</h2>
+
+<section class="products">
 
 
 <!-- SmartShop -->
 
-<div class="project">
+<div class="product">
 
 <img src="assets/smart-shop-ora.png">
 
@@ -248,7 +244,7 @@ A growing ecosystem of tools designed to improve real-world operations.
 
 <p>
 
-Smart grocery planning that helps households save money and fuel.
+Smart grocery planning that saves households money and fuel.
 
 </p>
 
@@ -256,14 +252,19 @@ Smart grocery planning that helps households save money and fuel.
 
 <br>
 
-<a class="button" href="smartshop.html">View Product</a>
+<a class="button" href="smartshop.html">
+
+View Product
+
+</a>
 
 </div>
 
 
+
 <!-- Inform Me -->
 
-<div class="project">
+<div class="product">
 
 <img src="assets/Inform-Me.png">
 
@@ -280,9 +281,10 @@ Field-to-office reporting system for operators.
 </div>
 
 
+
 <!-- Shifty -->
 
-<div class="project">
+<div class="product">
 
 <img src="assets/shifty-logo.png">
 
@@ -290,7 +292,7 @@ Field-to-office reporting system for operators.
 
 <p>
 
-Smart workforce scheduling and task coordination.
+Smart scheduling and workforce coordination.
 
 </p>
 
@@ -299,9 +301,10 @@ Smart workforce scheduling and task coordination.
 </div>
 
 
+
 <!-- WorkForge -->
 
-<div class="project">
+<div class="product">
 
 <img src="assets/work-forge-large.png">
 
@@ -309,7 +312,7 @@ Smart workforce scheduling and task coordination.
 
 <p>
 
-Forge operational workflows and automation tools.
+Forge powerful operational workflows and automation tools.
 
 </p>
 
@@ -318,9 +321,10 @@ Forge operational workflows and automation tools.
 </div>
 
 
+
 <!-- Inventoried -->
 
-<div class="project">
+<div class="product">
 
 <img src="assets/Inventoried-logo.png">
 
@@ -328,7 +332,7 @@ Forge operational workflows and automation tools.
 
 <p>
 
-Track assets, inventory, and equipment.
+Inventory and asset tracking platform.
 
 </p>
 
@@ -337,9 +341,10 @@ Track assets, inventory, and equipment.
 </div>
 
 
+
 <!-- Market Me -->
 
-<div class="project">
+<div class="product">
 
 <img src="assets/market-me.png">
 
@@ -347,7 +352,7 @@ Track assets, inventory, and equipment.
 
 <p>
 
-Marketing tools for small businesses.
+Growth tools built for small businesses.
 
 </p>
 
@@ -355,30 +360,9 @@ Marketing tools for small businesses.
 
 </div>
 
-</section>
-
-
-<h2 class="section-title">Operational Reality Advisors</h2>
-
-<section class="projects">
-
-<div class="project">
-
-<img src="assets/oprealityadvisors.png">
-
-<h3>Operational Reality Advisors</h3>
-
-<p>
-
-Operational consulting and product development studio.
-
-</p>
-
-<span class="status live">Active</span>
-
-</div>
 
 </section>
+
 
 
 <footer>
@@ -390,6 +374,7 @@ Operational consulting and product development studio.
 <p>Prince Edward Island, Canada</p>
 
 </footer>
+
 
 </body>
 </html>
