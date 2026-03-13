@@ -1,361 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>ORA Developments PEI</title>
-
-<meta name="description" content="ORA Developments PEI builds practical software tools designed for real-world operations, businesses, and everyday users.">
-
-<meta property="og:title" content="ORA Developments PEI">
-<meta property="og:description" content="Island-built software studio creating practical operational tools.">
-<meta property="og:image" content="ora-logo.png">
-
-<link rel="icon" href="ora-logo.png">
+<title>ORA Developments</title>
 
 <style>
 
 /* GLOBAL */
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
-margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
 background:#0b1118;
 color:white;
 overflow-x:hidden;
+
 }
 
-/* animated grid */
+/* BACKGROUND GRADIENT */
 
-body{
-background-image:
-linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-background-size:48px 48px;
-}
+body::before{
 
-/* ambient lighting */
-
-body:before{
 content:"";
 position:fixed;
-top:-300px;
-left:-200px;
-width:900px;
-height:900px;
-background:radial-gradient(circle, rgba(47,128,237,.35), transparent 70%);
-filter:blur(180px);
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:
+
+radial-gradient(circle at 30% 40%,#1a4cff44,transparent 40%),
+radial-gradient(circle at 70% 60%,#ff7a0044,transparent 40%);
+
+animation:moveGradient 20s infinite linear;
 z-index:-1;
-animation:lightMove1 26s infinite alternate;
+
 }
 
-body:after{
-content:"";
-position:fixed;
-bottom:-300px;
-right:-200px;
-width:900px;
-height:900px;
-background:radial-gradient(circle, rgba(33,163,102,.30), transparent 70%);
-filter:blur(180px);
-z-index:-1;
-animation:lightMove2 30s infinite alternate;
+@keyframes moveGradient{
+
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+
 }
 
-@keyframes lightMove1{
-from{transform:translate(0,0)}
-to{transform:translate(250px,140px)}
-}
-
-@keyframes lightMove2{
-from{transform:translate(0,0)}
-to{transform:translate(-260px,-160px)}
-}
-
-/* NAV */
+/* NAVBAR */
 
 nav{
+
 position:fixed;
 top:20px;
 left:50%;
 transform:translateX(-50%);
-background:rgba(15,20,30,.7);
-backdrop-filter:blur(16px);
-border:1px solid rgba(255,255,255,.06);
-padding:14px 30px;
+background:rgba(10,14,22,.7);
+backdrop-filter:blur(18px);
+padding:14px 26px;
 border-radius:40px;
+display:flex;
+align-items:center;
+gap:30px;
 z-index:1000;
+
+}
+
+nav img{
+
+height:36px;
+
 }
 
 nav a{
-color:#c7d4e5;
+
 text-decoration:none;
-margin:0 18px;
+color:#9fb2c7;
 font-size:14px;
+
 }
 
 nav a:hover{
+
 color:white;
+
 }
-
-/* LAYOUT */
-
-.wrap{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-}
-
-.spacer{height:110px}
 
 /* HERO */
 
 .hero{
+
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
 text-align:center;
-padding:140px 20px 120px;
+padding:40px;
+
 }
 
 .hero img{
-width:170px;
-margin-bottom:30px;
-animation:float 6s ease-in-out infinite;
-}
 
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-12px)}
-100%{transform:translateY(0)}
+width:160px;
+margin-bottom:20px;
+
 }
 
 .hero h1{
-font-size:72px;
-margin:0 0 18px;
-letter-spacing:-1px;
 
-background:linear-gradient(90deg,#ffffff,#9cc2ff,#ffffff);
-background-size:200%;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+font-size:70px;
+margin-bottom:10px;
 
-animation:gradientMove 7s linear infinite;
-}
-
-@keyframes gradientMove{
-to{background-position:200% center}
 }
 
 .hero p{
+
+color:#a6b4c6;
 font-size:20px;
-color:#a9b6c6;
-max-width:640px;
-margin:auto;
-line-height:1.7;
+max-width:600px;
+
+}
+
+/* BUTTONS */
+
+.buttons{
+
+margin-top:30px;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:16px 26px;
+border-radius:12px;
+text-decoration:none;
+font-size:15px;
+margin:8px;
+color:white;
+
+background:linear-gradient(135deg,#2f80ed,#4ea1ff);
+
+}
+
+.btn.secondary{
+
+background:#21a366;
+
 }
 
 /* SECTION */
 
-.section{
-margin-top:140px;
+section{
+
+padding:120px 20px;
+max-width:1200px;
+margin:auto;
+
 }
 
-.section h2{
+section h2{
+
 text-align:center;
-font-size:42px;
-margin-bottom:70px;
+font-size:40px;
+margin-bottom:60px;
+
 }
 
-/* GRID */
+/* PRODUCT GRID */
 
-.grid{
+.products{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:36px;
-}
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
 
-/* CARD */
+}
 
 .card{
-background:rgba(20,28,38,.85);
-border-radius:24px;
-padding:40px;
-border:1px solid rgba(255,255,255,.06);
-transition:.35s;
-}
 
-.card:hover{
-transform:translateY(-12px) scale(1.02);
-box-shadow:
-0 30px 80px rgba(0,0,0,.7),
-0 0 60px rgba(47,128,237,.35);
-border-color:rgba(47,128,237,.35);
+background:#101822;
+border-radius:20px;
+padding:30px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+
+transition:.35s;
+
 }
 
 .card img{
+
+width:120px;
+margin-bottom:20px;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+box-shadow:0 50px 120px rgba(0,0,0,.6);
+
+}
+
+/* FOUNDER */
+
+.founder{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.founder img{
+
 width:100%;
-border-radius:14px;
-margin-bottom:20px;
+
 }
 
-.card h3{
-font-size:28px;
-margin:0 0 10px;
-}
+.founder p{
 
-.card p{
-color:#a9b6c6;
-line-height:1.7;
-margin-bottom:20px;
-}
-
-.card a{
-display:inline-block;
-padding:14px 24px;
-border-radius:12px;
-text-decoration:none;
-font-size:14px;
-color:white;
-background:linear-gradient(135deg,#2f80ed,#4ea1ff);
-box-shadow:0 0 20px rgba(47,128,237,.35);
-}
-
-.card a:hover{
-transform:translateY(-2px);
-}
-
-/* ABOUT */
-
-.about{
-max-width:760px;
-margin:auto;
-text-align:center;
-}
-
-.about p{
-color:#a9b6c6;
+color:#9fb2c7;
 font-size:18px;
-line-height:1.8;
-}
 
-/* CTA */
-
-.cta{
-text-align:center;
-margin-top:160px;
-padding:80px;
-background:rgba(20,28,38,.85);
-border-radius:30px;
-border:1px solid rgba(255,255,255,.06);
-}
-
-.cta h2{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.cta p{
-color:#a9b6c6;
-margin-bottom:30px;
-}
-
-.cta a{
-padding:18px 34px;
-border-radius:14px;
-background:linear-gradient(135deg,#21a366,#2bc97e);
-text-decoration:none;
-color:white;
-font-size:16px;
 }
 
 /* FOOTER */
 
 footer{
-margin-top:160px;
+
 text-align:center;
+padding:100px 20px;
 color:#7d8a9a;
-font-size:14px;
+
+}
+
+footer img{
+
+width:220px;
+margin-bottom:20px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.hero h1{
+font-size:44px;
+}
+
+.founder{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
+
+<!-- NAVBAR -->
+
 <nav>
-<a href="index.html">ORA</a>
+
+<img src="assets/ora-dev-logo.png">
+
+<a href="#">Home</a>
 <a href="smartshop.html">SmartShop</a>
-<a href="informme.html">Inform' Me</a>
-<a href="fleet.html">Fleet Tools</a>
-<a href="projects.html">Projects</a>
+<a href="#">Products</a>
+<a href="#">About</a>
+
 </nav>
 
-<div class="spacer"></div>
 
-<div class="wrap">
+
+<!-- HERO -->
 
 <section class="hero">
 
-<img src="ora-logo.png">
+<img src="assets/ora-dev-logo.png">
 
-<h1>ORA Developments PEI</h1>
+<h1>ORA Developments</h1>
 
 <p>
-A software studio focused on building practical tools that solve real operational problems.
+
+Software tools built from real operational experience.
+
 </p>
+
+<div class="buttons">
+
+<a class="btn" href="smartshop.html">
+Explore Products
+</a>
+
+<a class="btn secondary" href="#">
+Contact
+</a>
+
+</div>
 
 </section>
 
-<section class="section">
 
-<h2>Products</h2>
 
-<div class="grid">
+<!-- PRODUCTS -->
+
+<section>
+
+<h2>ORA Software Ecosystem</h2>
+
+<div class="products">
 
 <div class="card">
 
-<img src="smartshop-preview.png">
+<img src="assets/smart-shop-ora.png">
 
 <h3>SmartShop</h3>
 
-<p>
-A smarter grocery planning platform designed to reduce wasted trips,
-organize shopping lists, and optimize grocery spending.
-</p>
-
-<a href="smartshop.html">Open SmartShop</a>
+<p>Smart grocery planning that saves fuel and money.</p>
 
 </div>
 
+
 <div class="card">
 
-<img src="informme-preview.png">
+<img src="assets/Inform-Me.png">
 
 <h3>Inform' Me</h3>
 
-<p>
-An operational communication platform designed to simplify
-information flow inside teams and organizations.
-</p>
-
-<a href="informme.html">View Project</a>
+<p>Field-to-office reporting for operators.</p>
 
 </div>
 
+
 <div class="card">
 
-<img src="fleet-preview.png">
+<img src="assets/shifty-logo.png">
 
-<h3>Fleet Tools</h3>
+<h3>Shifty</h3>
 
-<p>
-Driver workflow utilities and fleet management tools
-built specifically for operational industries.
-</p>
+<p>Smart workforce scheduling.</p>
 
-<a href="fleet.html">Explore Tools</a>
+</div>
+
+
+<div class="card">
+
+<img src="assets/work-forge-large.png">
+
+<h3>WorkForge</h3>
+
+<p>Forge powerful operational tools.</p>
+
+</div>
+
+
+<div class="card">
+
+<img src="assets/Inventoried-logo.png">
+
+<h3>Inventoried</h3>
+
+<p>Inventory and asset tracking.</p>
+
+</div>
+
+
+<div class="card">
+
+<img src="assets/market-me.png">
+
+<h3>Market Me</h3>
+
+<p>Growth tools for small business.</p>
 
 </div>
 
@@ -363,71 +395,51 @@ built specifically for operational industries.
 
 </section>
 
-<section class="section">
 
-<h2>About ORA Developments</h2>
 
-<div class="about">
+<!-- FOUNDER -->
+
+<section>
+
+<div class="founder">
+
+<img src="assets/file_0000000082c071fd98ff6e5aeba34a23.png">
+
+<div>
+
+<h2>Built by Operators</h2>
 
 <p>
-ORA Developments PEI is focused on creating practical software solutions for real-world environments.  
-Our projects focus on improving efficiency, reducing wasted time, and helping people operate smarter in everyday life and work.
+
+ORA Developments creates practical software tools inspired by real work environments.
+
+Our products are built to solve operational problems in logistics, field work, and everyday life.
+
 </p>
 
 </div>
 
-</section>
-
-<section class="section">
-
-<h2>Development Roadmap</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="project-placeholder.png">
-<h3>Operational Apps</h3>
-<p>Tools focused on improving field workflows and operational processes.</p>
-</div>
-
-<div class="card">
-<img src="project-placeholder.png">
-<h3>Consumer Apps</h3>
-<p>Products designed to simplify everyday decisions and tasks.</p>
-</div>
-
-<div class="card">
-<img src="project-placeholder.png">
-<h3>Business Platforms</h3>
-<p>Software systems designed to streamline small business operations.</p>
-</div>
-
 </div>
 
 </section>
 
-<section class="cta">
 
-<h2>Follow Development</h2>
 
-<p>
-Explore upcoming projects and development updates from ORA.
-</p>
-
-<a href="projects.html">View Project Roadmap</a>
-
-</section>
+<!-- FOOTER -->
 
 <footer>
 
+<img src="assets/OPREALITY FOOTER.png">
+
 <p>
-ORA Developments PEI<br>
-Built by Operators
+Operational Reality Advisors
+</p>
+
+<p>
+Prince Edward Island, Canada
 </p>
 
 </footer>
-
-</div>
 
 </body>
 </html>
