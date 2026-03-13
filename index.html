@@ -1,464 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>SmartShop by ORA | Access & Install</title>
 
-  <meta name="title" content="SmartShop by ORA" />
-  <meta
-    name="description"
-    content="Open SmartShop on web, sign in, or access the Android install route. Built to help you shop smarter and save time, gas, and money."
-  />
-  <meta
-    name="keywords"
-    content="SmartShop, grocery app, grocery savings, price comparison, PEI grocery app, SmartShop ORA"
-  />
-  <meta name="author" content="Operational Reality Advisors" />
-  <meta name="robots" content="index, follow" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="SmartShop by ORA" />
-  <meta
-    property="og:description"
-    content="Open SmartShop in seconds. Use the web app, sign in, or access Android download through your account."
-  />
-  <meta property="og:url" content="https://jakeoperationalrealityadvisors-design.github.io/smartshop-install/" />
-  <meta property="og:image" content="https://jakeoperationalrealityadvisors-design.github.io/smartshop-install/smartshop-logo.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="SmartShop by ORA" />
+<title>ORA Developments PEI</title>
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SmartShop by ORA" />
-  <meta
-    name="twitter:description"
-    content="Shop smarter with SmartShop by ORA. Open the web app or access Android install through your account."
-  />
-  <meta name="twitter:image" content="https://jakeoperationalrealityadvisors-design.github.io/smartshop-install/smartshop-logo.png" />
+<meta name="description" content="ORA Developments PEI builds practical software tools designed to solve real-world problems for everyday users, businesses, and operational industries.">
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="SmartShop" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="theme-color" content="#0b1118" />
+<style>
 
-  <link rel="canonical" href="https://jakeoperationalrealityadvisors-design.github.io/smartshop-install/" />
+body{
+margin:0;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:#0b1118;
+color:white;
+}
 
-  <style>
-    :root {
-      --bg: #0b1118;
-      --bg-2: #0f1722;
-      --panel: rgba(18, 26, 36, 0.95);
-      --panel-2: #182230;
-      --panel-3: rgba(255, 255, 255, 0.04);
-      --text: #f4f7fb;
-      --muted: #b8c2cf;
-      --muted-2: #8e9aaa;
-      --blue: #2f80ed;
-      --blue-hover: #256ad0;
-      --green: #21a366;
-      --green-hover: #1b8553;
-      --border: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(47, 128, 237, 0.22);
-      --shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
-      --radius-xl: 28px;
-      --radius-lg: 18px;
-      --radius-md: 14px;
-      --soft: #d8e8ff;
-      --success-soft: rgba(33, 163, 102, 0.14);
-      --blue-soft: rgba(47, 128, 237, 0.12);
-    }
+nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+background:rgba(11,17,24,.85);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+padding:14px;
+text-align:center;
+z-index:1000;
+}
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+nav a{
+color:#d6e2f0;
+text-decoration:none;
+margin:0 16px;
+font-size:14px;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top, rgba(47, 128, 237, 0.14), transparent 30%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-      min-height: 100vh;
-    }
+nav a:hover{
+color:white;
+}
 
-    a { color: inherit; }
+.spacer{
+height:70px;
+}
 
-    .wrap {
-      width: 100%;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 28px 18px 44px;
-    }
+.wrap{
+max-width:1150px;
+margin:auto;
+padding:40px 20px;
+}
 
-    .hero {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
+.hero{
+text-align:center;
+padding:70px 20px 60px;
+background:
+radial-gradient(circle at top, rgba(47,128,237,.15), transparent 50%);
+border-radius:20px;
+margin-bottom:70px;
+}
 
-    .hero-top {
-      padding: 28px 22px 12px;
-      text-align: center;
-    }
+.hero img{
+width:140px;
+margin-bottom:20px;
+}
 
-    .brand-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--blue-soft);
-      color: var(--soft);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(47, 128, 237, 0.18);
-      text-transform: uppercase;
-    }
+.hero h1{
+font-size:50px;
+margin:0 0 12px;
+letter-spacing:-1px;
+}
 
-    .logo {
-      width: 220px;
-      max-width: 88%;
-      height: auto;
-      display: block;
-      margin: 0 auto 18px;
-      filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.28));
-    }
+.hero p{
+color:#b8c2cf;
+font-size:18px;
+max-width:620px;
+margin:auto;
+line-height:1.7;
+}
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: 36px;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-    }
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+}
 
-    .subhead {
-      margin: 0 auto;
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.65;
-    }
+.apps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+}
 
-    .hero-callout {
-      margin: 22px 22px 0;
-      padding: 18px 18px;
-      background: linear-gradient(135deg, rgba(47, 128, 237, 0.14), rgba(33, 163, 102, 0.1));
-      border: 1px solid var(--border-strong);
-      border-radius: var(--radius-lg);
-      text-align: center;
-      color: #eaf3ff;
-      font-size: 15px;
-      line-height: 1.55;
-    }
+.card{
+background:#111a24;
+padding:34px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.05);
+transition:all .25s ease;
+position:relative;
+overflow:hidden;
+}
 
-    .hero-callout strong { color: #ffffff; }
+.card:before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:radial-gradient(circle, rgba(47,128,237,.08), transparent 60%);
+opacity:0;
+transition:.3s;
+}
 
-    .web-option {
-      margin: 16px 22px 0;
-      padding: 16px 18px;
-      background: var(--panel-3);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      text-align: left;
-      font-size: 15px;
-      line-height: 1.65;
-      color: var(--muted);
-    }
+.card:hover:before{
+opacity:1;
+}
 
-    .web-option strong { color: var(--text); }
+.card:hover{
+transform:translateY(-8px);
+border-color:rgba(47,128,237,.25);
+}
 
-    .actions {
-      padding: 22px;
-      display: grid;
-      gap: 14px;
-    }
+.card h2{
+margin-top:0;
+font-size:26px;
+}
 
-    .btn {
-      display: block;
-      width: 100%;
-      text-decoration: none;
-      text-align: center;
-      padding: 17px 18px;
-      border-radius: var(--radius-md);
-      font-weight: 700;
-      font-size: 16px;
-      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-    }
+.card p{
+color:#b8c2cf;
+line-height:1.7;
+margin-bottom:20px;
+}
 
-    .btn:hover { transform: translateY(-1px); }
+.card a{
+display:inline-block;
+padding:11px 18px;
+background:#2f80ed;
+border-radius:9px;
+text-decoration:none;
+color:white;
+font-size:14px;
+transition:.2s;
+}
 
-    .btn-primary {
-      background: var(--blue);
-      color: white;
-    }
+.card a:hover{
+background:#256ad0;
+}
 
-    .btn-primary:hover { background: var(--blue-hover); }
+.future{
+text-align:center;
+margin-top:80px;
+padding:40px;
+background:#111a24;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.05);
+}
 
-    .btn-login {
-      background: var(--green);
-      color: white;
-    }
+.future h2{
+margin-top:0;
+}
 
-    .btn-login:hover { background: var(--green-hover); }
+.future p{
+color:#b8c2cf;
+max-width:600px;
+margin:auto;
+line-height:1.6;
+}
 
-    .btn-secondary {
-      background: var(--panel-2);
-      color: white;
-      border: 1px solid var(--border);
-    }
+.future a{
+display:inline-block;
+margin-top:20px;
+padding:12px 22px;
+background:#21a366;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-size:15px;
+}
 
-    .btn-secondary:hover {
-      background: #202b3b;
-      border-color: rgba(255, 255, 255, 0.14);
-    }
+.future a:hover{
+background:#1b8553;
+}
 
-    .btn-note {
-      margin-top: -2px;
-      font-size: 13px;
-      color: var(--muted-2);
-      line-height: 1.5;
-      text-align: center;
-    }
+footer{
+margin-top:80px;
+text-align:center;
+color:#8e9aaa;
+font-size:14px;
+}
 
-    .device-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      padding: 0 22px 22px;
-    }
+</style>
 
-    .card {
-      background: rgba(24, 34, 48, 0.9);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      text-align: left;
-    }
-
-    .card h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      line-height: 1.2;
-    }
-
-    .card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 15px;
-    }
-
-    .steps {
-      margin: 0;
-      padding-left: 20px;
-      color: var(--text);
-      line-height: 1.75;
-      font-size: 15px;
-    }
-
-    .steps li { margin-bottom: 8px; }
-
-    .tips {
-      margin-top: 14px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      background: rgba(47, 128, 237, 0.1);
-      border: 1px solid rgba(47, 128, 237, 0.18);
-      color: var(--soft);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .feature-strip {
-      padding: 0 22px 22px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    .feature {
-      background: rgba(18, 26, 36, 0.85);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 15px 16px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
-      text-align: left;
-    }
-
-    .feature strong { color: var(--text); }
-
-    .footer {
-      text-align: center;
-      color: var(--muted-2);
-      font-size: 13px;
-      line-height: 1.7;
-      padding: 26px 18px 6px;
-    }
-
-    .footer a {
-      color: #cdd8e6;
-      text-decoration: none;
-    }
-
-    .footer a:hover { text-decoration: underline; }
-
-    @media (min-width: 700px) {
-      .device-grid { grid-template-columns: 1fr 1fr; }
-      .feature-strip { grid-template-columns: repeat(3, 1fr); }
-      h1 { font-size: 42px; }
-    }
-  </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <main class="hero">
-      <section class="hero-top">
-        <div class="brand-badge">SmartShop by ORA • Easy Access</div>
 
-        <img
-          src="smartshop-logo.png"
-          alt="SmartShop by ORA logo"
-          class="logo"
-        />
+<nav>
+<a href="index.html">ORA Developments</a>
+<a href="smartshop.html">SmartShop</a>
+<a href="informme.html">Inform' Me</a>
+<a href="fleet.html">Fleet Tools</a>
+<a href="projects.html">Projects</a>
+</nav>
 
-        <h1>Access SmartShop Your Way</h1>
+<div class="spacer"></div>
 
-        <p class="subhead">
-          Open the SmartShop web app, sign in to your account, or access the Android install route.
-          Built to make everyday grocery planning faster, cleaner, and a whole lot less annoying.
-        </p>
-      </section>
+<div class="wrap">
 
-      <div class="hero-callout">
-        <strong>The easiest option is still the web app.</strong><br />
-        It opens right in your browser and works great on most devices with no install required.
-      </div>
+<section class="hero">
 
-      <div class="web-option">
-        <strong>Good news:</strong> you can use SmartShop without installing anything.
-        Open the web app, sign in, and start using it right away. If you’re on iPhone or iPad,
-        you can also add it to your Home Screen for quick one-tap access.
-      </div>
+<img src="ora-Logo">
 
-      <section class="actions">
-        <a
-          class="btn btn-primary"
-          href="https://smartshopbyora.lovable.app/?source=installpage"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open SmartShop
-        </a>
+<h1>ORA Developments PEI</h1>
 
-        <a
-          class="btn btn-login"
-          href="https://smartshopbyora.lovable.app/login?source=installpage"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Log In
-        </a>
+<p>
+Island-built software focused on practical tools that solve real-world problems
+for everyday users, small businesses, and operational industries.
+</p>
 
-        <a class="btn btn-secondary" href="#ios-guide">
-          iPhone / iPad Help
-        </a>
+</section>
 
-        <a
-          class="btn btn-secondary"
-          href="https://smartshopbyora.lovable.app/get-app?source=installpage&download=apk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download Android APK
-        </a>
 
-        <div class="btn-note">
-          Android download is routed through SmartShop so account access can be verified first.
-        </div>
-      </section>
+<h2 class="section-title">Applications</h2>
 
-      <section class="device-grid">
-        <div class="card" id="ios-guide">
-          <h2>🍎 iPhone / iPad Users</h2>
-          <p>
-            The easiest way to use SmartShop on iPhone is through Safari.
-            You can also add it to your Home Screen so it feels much more like a normal app.
-          </p>
+<div class="apps">
 
-          <ol class="steps">
-            <li>Tap <strong>Open SmartShop</strong> above.</li>
-            <li>If needed, open the page in <strong>Safari</strong>.</li>
-            <li>Tap the <strong>Share</strong> button in Safari.</li>
-            <li>Scroll and tap <strong>Add to Home Screen</strong>.</li>
-            <li>Tap <strong>Add</strong>.</li>
-            <li>Open SmartShop anytime from your Home Screen.</li>
-          </ol>
+<div class="card">
 
-          <div class="tips">
-            If you opened the page from Facebook or another app, look for
-            <strong>Open in Safari</strong> first. After that, adding it to your Home Screen is easy.
-          </div>
-        </div>
+<h2>SmartShop</h2>
 
-        <div class="card">
-          <h2>🤖 Android Users</h2>
-          <p>
-            You can use SmartShop right in your browser, or request the Android version through your SmartShop account if you prefer a more app-like install experience.
-          </p>
+<p>
+A smarter grocery planning platform designed to reduce wasted trips,
+organize shopping lists, and help users shop more efficiently.
+</p>
 
-          <ol class="steps">
-            <li>For the simplest option, tap <strong>Open SmartShop</strong>.</li>
-            <li>Log in and start using it right away.</li>
-            <li>If you want the Android version, tap <strong>Download Android APK</strong>.</li>
-            <li>You may be asked to log in or confirm access before the download starts.</li>
-            <li>Open the file on your Android phone and follow the install prompts.</li>
-            <li>Once installed, sign in and your account should sync normally.</li>
-          </ol>
+<a href="smartshop.html">Open SmartShop</a>
 
-          <div class="tips">
-            Not into downloading apps outside the Play Store? Totally fair — the web app is still the easiest option and works great.
-          </div>
-        </div>
-      </section>
+</div>
 
-      <section class="feature-strip">
-        <div class="feature">
-          <strong>No pressure install</strong><br />
-          Use SmartShop right in your browser without downloading anything at all.
-        </div>
 
-        <div class="feature">
-          <strong>Account-based access</strong><br />
-          Android install access is routed through SmartShop so your subscription can be checked first.
-        </div>
+<div class="card">
 
-        <div class="feature">
-          <strong>Built for real life</strong><br />
-          Practical grocery tools made to save time, money, gas, and extra running around.
-        </div>
-      </section>
-    </main>
+<h2>Inform' Me</h2>
 
-    <footer class="footer">
-      Built by Operators<br />
-      Operational Reality Advisors<br /><br />
-      <a
-        href="https://smartshopbyora.lovable.app/?source=installpage"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open SmartShop
-      </a>
-    </footer>
-  </div>
+<p>
+An operational communication platform designed to simplify internal
+information sharing and workflow coordination.
+</p>
+
+<a href="informme.html">View Project</a>
+
+</div>
+
+
+<div class="card">
+
+<h2>Fleet Tools</h2>
+
+<p>
+Driver workflow tools and fleet utilities designed specifically
+for transportation and operational environments.
+</p>
+
+<a href="fleet.html">Explore Tools</a>
+
+</div>
+
+</div>
+
+
+<section class="future">
+
+<h2>Upcoming Projects</h2>
+
+<p>
+Explore upcoming software projects currently under development
+within the ORA ecosystem.
+</p>
+
+<a href="projects.html">View Development Roadmap</a>
+
+</section>
+
+
+<footer>
+
+<p>
+ORA Developments PEI<br>
+Built by Operators
+</p>
+
+</footer>
+
+</div>
+
 </body>
 </html>
